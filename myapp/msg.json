@@ -1,0 +1,39 @@
+{
+  "object": "whatsapp_business_account",
+  "entry": [
+    {
+      "id": "1942950843123682",
+      "changes": [
+        {
+          "value": {
+            "messaging_product": "whatsapp",
+            "metadata": {
+              "display_phone_number": "15551759220",
+              "phone_number_id": "631329230073212"
+            },
+            "contacts": [
+              {
+                "profile": {
+                  "name": "Ayush Sinha"
+                },
+                "wa_id": "917290995382"
+              }
+            ],
+            "messages": [
+              {
+                "from": "917290995382",
+                "id": "wamid.HBgMOTE3MjkwOTk1MzgyFQIAEhggRTE3Mjk4NDZDRTZEQ0Q2N0Y4Q0MzODk1M0VCMUZFM0QA",
+                "timestamp": "1752562165",
+                "text": {
+                  "body": "meow"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          "field": "messages"
+        }
+      ]
+    }
+  ]
+}
