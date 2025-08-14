@@ -2,12 +2,11 @@ __pycache__/
 *.pyc
 *.pyo
 
-venv/
-.env/
+myapp/.env
 
-alembic/versions/__pycache__/
-alembic.ini/
-.vscode/
-.idea/
+alembic/versions/__pycache__/*
+alembic.ini
+.vscode
+.idea
 
 
