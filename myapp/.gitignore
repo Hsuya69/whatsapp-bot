@@ -6,7 +6,8 @@ venv/
 .env/
 
 alembic/versions/__pycache__/
-
+alembic.ini
+alembic/env.py
 .vscode/
 .idea/
 
