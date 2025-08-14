@@ -5,3 +5,4 @@ asyncpg
 requests
 dotenv
 psycopg2
+uvicorn
