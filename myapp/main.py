@@ -69,9 +69,7 @@ async def get_msg(request : Request):
         message = messages[0]
         sender = message.get("from")
         msg = message.get("text", {}).get("body", "")
-        with open("msg.txt", "a", encoding="utf-8") as file:
-            file.write(f"{sender}: {msg}\n")
-        #print(await send_msg(sender,"kokookokok"))
+        
         async with AsyncSessionLocal() as session:
             result = await session.execute(select(Person).where(Person.ph_no==sender).with_for_update())
             pep=result.scalar()

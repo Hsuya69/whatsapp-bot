@@ -10,11 +10,12 @@ async def handle_asked_name(send_msg,msg,user,sender,db):
 
 
 async def handle_asked_age(send_msg,msg,user,sender,db):
-    user.age=msg
+    user.age=int(msg)
     await send_msg(sender,f"thanks {user.name}, you are all set!!")
-    user.step="go to menu"
+    await go_to_menu(send_msg,msg,user,sender,db)
 
 async def go_to_menu(send_msg,msg,user,sender,db):
+    user.step="go to menu"
     if msg.lower() not in ["update profile","delete profile","show details"]:
         await send_msg(sender,"update profile\ndelete profile\nshow details")
         return
@@ -33,6 +34,7 @@ async def show_details(send_msg,msg,user,sender,db):
     age=user.age
     await send_msg(sender,f"your name is {name}, and your age is {age}")
     user.step="go to menu"
+    await send_msg(sender,"reply ok to go back")
 
 
 async def delete_user(send_msg,msg,user,sender,db):
@@ -63,14 +65,14 @@ async def update_choice(send_msg,msg,user,sender,db):
 async def update_name(send_msg,msg,user,sender,db):
     user.name=msg
     user.step="go to menu"
-    await send_msg(sender,"back to menu reply 'ok'")
+    await send_msg(sender,"updated successfully \nto go back to menu \n reply 'ok'")
     return
 
 async def update_age(send_msg,msg,user,sender,db):
     if msg.isdigit():
-        user.age=msg
+        user.age=int(msg)
         user.step="go to menu"
-        await send_msg(sender,"back to menu reply 'ok'")
+        await send_msg(sender,"updated successfully \n to go back to menu \n reply 'ok'")
 
     else:
         await send_msg(sender,"enter valid age in number")
