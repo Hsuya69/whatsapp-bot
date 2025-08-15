@@ -2,7 +2,7 @@
 #from insert_handler import handle_asked_age,handle_asked_name,handle_start
 #from update_handler import handle_update_age,handle_update_choice,handle_update_name
 #from delete_handler import handle_delete_user
-from handler import *
+from .handler import *
 '''fsmblock={
     "start":handle_start,
     "asked name":handle_asked_name,

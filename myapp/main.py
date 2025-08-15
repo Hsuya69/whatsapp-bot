@@ -1,12 +1,12 @@
 import requests 
 from fastapi import FastAPI,Form,Request
 from fastapi.responses import PlainTextResponse
-from db import AsyncSessionLocal
-from models import Person,select
+from .db import AsyncSessionLocal
+from .models import Person,select
 import re
 import os
 from dotenv import load_dotenv
-from fsmmap import fsmblock
+from .fsmmap import fsmblock
 
 app=FastAPI()
 load_dotenv()
