@@ -91,5 +91,5 @@ async def get_msg(request : Request):
 
         return PlainTextResponse("Message received", status_code=200)
     except Exception as e:
-        return PlainTextResponse(f"Error: {str(e)}", status_code=500)
+        return PlainTextResponse(f"Error: {str(e)}", status_code=200)
 
